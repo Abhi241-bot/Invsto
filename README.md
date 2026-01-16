@@ -2,25 +2,25 @@
 
 Data Science / Machine Learning Internship Assessment
 
-This repository contains an end-to-end stock price prediction pipeline developed as part of an internship assessment. The project compares a classical time-series model (ARIMA) with a machine learning model (Gradient Boosting Regressor) across multiple large-cap technology stocks.
+This repository presents an end-to-end stock price prediction pipeline developed as part of a data science internship assessment. The project compares a classical time-series approach (ARIMA) with a machine learning model (Gradient Boosting Regressor) across multiple large-cap technology stocks.
 
-The emphasis is on model comparison, data quality, time-series awareness, and practical trading relevance, rather than purely maximizing predictive accuracy.
+The focus is on model comparison, data quality, time-series awareness, and practical trading relevance, rather than solely maximizing predictive accuracy.
 
 🧠 Problem Statement
 
-The objective is to build a robust and reproducible data science pipeline that:
+The objective is to build a robust, reproducible, and interpretable data science pipeline that:
 
-Processes historical OHLCV stock data
+📊 Processes historical OHLCV stock data
 
-Performs exploratory data analysis (EDA)
+🔍 Performs exploratory data analysis (EDA)
 
-Engineers time-series and technical features
+🧮 Engineers meaningful time-series & technical features
 
-Trains and evaluates ARIMA and Gradient Boosting models
+🤖 Trains and evaluates ARIMA and Gradient Boosting models
 
-Compares model performance using appropriate error metrics
+📉 Compares model performance using appropriate error metrics
 
-Interprets results in the context of trading and risk management
+💡 Interprets results in the context of trading and risk management
 
 📊 Dataset
 
@@ -28,19 +28,19 @@ Source: Yahoo Finance (via yfinance)
 
 Frequency: Daily
 
-Period: Rolling 2-year window (~500 trading days per stock)
+Time Horizon: Rolling 2-year window (~500 trading days per stock)
 
-Stocks analyzed:
+Stocks Analyzed
 
-AAPL
+🍎 AAPL
 
-GOOGL
+🔎 GOOGL
 
-MSFT
+🪟 MSFT
 
-AMZN
+📦 AMZN
 
-TSLA
+🚗 TSLA
 
 🔧 Methodology Overview
 1️⃣ Data Preparation
@@ -65,27 +65,32 @@ Moving averages and regime behavior
 
 3️⃣ Feature Engineering
 
-Over 50 features including:
+Over 50 engineered features, including:
 
 Lagged prices and volumes
 
 Rolling means and standard deviations
 
-Technical indicators (RSI, MACD, Bollinger Bands)
+Technical indicators:
+
+RSI
+
+MACD
+
+Bollinger Bands
 
 Price and volume change metrics
 
 4️⃣ Modeling
-
-ARIMA
+📉 ARIMA
 
 Parameter selection guided by ACF/PACF and AIC
 
 Evaluated using an out-of-sample holdout
 
-Gradient Boosting Regressor
+🌲 Gradient Boosting Regressor
 
-Tree-based non-linear model
+Tree-based non-linear regression model
 
 Hyperparameter experimentation via controlled grid search
 
@@ -95,52 +100,52 @@ Feature importance analysis for interpretability
 
 Models are compared using:
 
-RMSE
+RMSE (Root Mean Squared Error)
 
-MAE
+MAE (Mean Absolute Error)
 
-MAPE
+MAPE (Mean Absolute Percentage Error)
 
 Results are analyzed per stock to highlight regime-dependent behavior.
 
 📈 Key Results (Summary)
 
-Gradient Boosting outperformed ARIMA in 4 out of 5 stocks
+✅ Gradient Boosting outperformed ARIMA in 4 out of 5 stocks
 
-ARIMA performed better during strong trend regimes (e.g., GOOGL)
+📊 ARIMA performed better during strong trend regimes (e.g., GOOGL)
 
-Feature importance analysis showed strong autoregressive persistence, with lagged price levels dominating predictions
+🧠 Feature importance analysis showed strong autoregressive persistence
 
-Model performance varied by volatility and trend characteristics
+🔄 Model performance varied significantly with volatility and trend characteristics
 
-Important: Metrics should be interpreted as signal quality indicators, not realized trading returns.
+⚠️ Metrics should be interpreted as signal quality indicators, not realized trading returns.
 
 💡 Trading Interpretation (Conceptual)
 
-This project does not execute trades. However, predictions can be used as decision-support signals:
+This project does not execute trades. However, predictions may be used as decision-support signals:
 
-Gradient Boosting for short-horizon adaptive forecasting
+🤖 Gradient Boosting for short-horizon adaptive forecasting
 
-ARIMA as a stable baseline during persistent trends
+📉 ARIMA as a stable baseline during persistent trends
 
-Stop-loss levels derived from model error (e.g., 2 × RMSE)
+🛑 Stop-loss levels derived from model error (e.g., 2 × RMSE)
 
-Monthly retraining using a rolling window
+🔁 Monthly retraining using a rolling window
 
 ⚠️ Limitations & Assumptions
 
-No transaction costs, slippage, or portfolio backtesting included
+No transaction costs, slippage, or portfolio backtesting
 
 Models predict price levels, not returns
 
-Time-series cross-validation is approximated; expanding-window validation is recommended for production
+Time-series cross-validation is approximated
+(expanding-window validation recommended for production)
 
-Calendar days are used for forecasting instead of exchange-specific trading calendars
+Calendar days are used instead of exchange-specific trading calendars
 
-These choices were made to keep the assessment focused, interpretable, and aligned with internship scope.
+These design choices keep the project focused, interpretable, and aligned with internship scope.
 
 🛠 Technologies Used
-
 Core Stack
 
 Python 3.x
@@ -157,4 +162,14 @@ Data
 
 Yahoo Finance (yfinance)
 
-The pipeline is designed to be extensible to large datasets (e.g., Dask) and cloud storage if required.
+🚀 Extensibility
+
+The pipeline is designed to be scalable and extensible, with potential future support for:
+
+Larger datasets (e.g., Dask)
+
+Cloud-based storage and execution
+
+Trading calendar-aware forecasting
+
+Return-based modeling and backtesting
