@@ -1,0 +1,29 @@
+
+================================================================================
+STOCK PRICE PREDICTION ANALYSIS
+================================================================================
+
+Stock: GOOGL
+Date: 2026-01-16 14:12:45
+
+MODEL PERFORMANCE:
+            Model      RMSE       MAE      MAPE
+            ARIMA 57.527424 47.993858 15.919085
+Gradient Boosting 62.998080 54.425835 18.221796
+
+IMPROVEMENT: GB is -9.5% better
+
+TOP FEATURES:
+       feature  importance
+(Close, GOOGL)    0.955972
+  (Low, GOOGL)    0.012556
+ (High, GOOGL)    0.006495
+    (STD_50, )    0.004954
+ (BB_Middle, )    0.004692
+
+RECOMMENDATIONS:
+1. Use Gradient Boosting for predictions
+2. Set stop-loss at 2x RMSE: $126.00
+3. Retrain monthly with new data
+
+================================================================================

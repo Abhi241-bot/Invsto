@@ -1,0 +1,29 @@
+
+================================================================================
+STOCK PRICE PREDICTION ANALYSIS
+================================================================================
+
+Stock: TSLA
+Date: 2026-01-16 14:16:07
+
+MODEL PERFORMANCE:
+            Model      RMSE       MAE      MAPE
+            ARIMA 88.307030 84.280360 18.950329
+Gradient Boosting  5.793032  3.548725  6.509417
+
+IMPROVEMENT: GB is 93.4% better
+
+TOP FEATURES:
+        feature  importance
+  (Close, TSLA)    0.954287
+    (Low, TSLA)    0.032965
+   (High, TSLA)    0.011515
+   (Open, TSLA)    0.000558
+(Price_Lag_1, )    0.000413
+
+RECOMMENDATIONS:
+1. Use Gradient Boosting for predictions
+2. Set stop-loss at 2x RMSE: $11.59
+3. Retrain monthly with new data
+
+================================================================================

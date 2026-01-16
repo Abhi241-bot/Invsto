@@ -1,0 +1,29 @@
+
+================================================================================
+STOCK PRICE PREDICTION ANALYSIS
+================================================================================
+
+Stock: MSFT
+Date: 2026-01-16 14:13:49
+
+MODEL PERFORMANCE:
+            Model      RMSE       MAE     MAPE
+            ARIMA 19.003366 16.532540 3.291897
+Gradient Boosting  4.630760  3.166922 3.854209
+
+IMPROVEMENT: GB is 75.6% better
+
+TOP FEATURES:
+        feature  importance
+  (Close, MSFT)    0.918125
+    (Low, MSFT)    0.025712
+   (High, MSFT)    0.014752
+      (MA_10, )    0.009798
+(Price_Lag_2, )    0.009156
+
+RECOMMENDATIONS:
+1. Use Gradient Boosting for predictions
+2. Set stop-loss at 2x RMSE: $9.26
+3. Retrain monthly with new data
+
+================================================================================

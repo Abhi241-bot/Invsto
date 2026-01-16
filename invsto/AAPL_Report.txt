@@ -1,0 +1,29 @@
+
+================================================================================
+STOCK PRICE PREDICTION ANALYSIS
+================================================================================
+
+Stock: AAPL
+Date: 2026-01-16 14:11:42
+
+MODEL PERFORMANCE:
+            Model      RMSE       MAE     MAPE
+            ARIMA 27.176816 24.581738 9.147484
+Gradient Boosting 13.776672 10.537059 5.671000
+
+IMPROVEMENT: GB is 49.3% better
+
+TOP FEATURES:
+       feature  importance
+ (Close, AAPL)    0.995482
+   (Low, AAPL)    0.003738
+      (MACD, )    0.000203
+  (High, AAPL)    0.000201
+(Volume, AAPL)    0.000057
+
+RECOMMENDATIONS:
+1. Use Gradient Boosting for predictions
+2. Set stop-loss at 2x RMSE: $27.55
+3. Retrain monthly with new data
+
+================================================================================

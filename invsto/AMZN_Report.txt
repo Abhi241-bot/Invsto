@@ -1,0 +1,29 @@
+
+================================================================================
+STOCK PRICE PREDICTION ANALYSIS
+================================================================================
+
+Stock: AMZN
+Date: 2026-01-16 14:15:04
+
+MODEL PERFORMANCE:
+            Model     RMSE      MAE     MAPE
+            ARIMA 9.676826 7.848462 3.432145
+Gradient Boosting 2.746460 1.118132 4.215256
+
+IMPROVEMENT: GB is 71.6% better
+
+TOP FEATURES:
+         feature  importance
+   (Close, AMZN)    0.993451
+    (High, AMZN)    0.005461
+     (Low, AMZN)    0.000916
+(Volume_MA_50, )    0.000050
+        (MA_5, )    0.000041
+
+RECOMMENDATIONS:
+1. Use Gradient Boosting for predictions
+2. Set stop-loss at 2x RMSE: $5.49
+3. Retrain monthly with new data
+
+================================================================================
