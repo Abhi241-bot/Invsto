@@ -1,4 +1,4 @@
-                                                 📈 Stock Price Prediction using ARIMA & Gradient Boosting
+📈 Stock Price Prediction using ARIMA & Gradient Boosting
 
 Data Science / Machine Learning Internship Assessment
 
